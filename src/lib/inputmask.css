@@ -1,0 +1,20 @@
+input {
+	background: transparent;
+	border: none;
+	color: #242222;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	width: 20px;
+	padding: 4px;
+	font-size: 16px;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
