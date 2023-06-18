@@ -16,7 +16,7 @@ export default [
 				file: packageJson.main,
 				format: 'cjs',
 				sourcemap: true,
-				name: 'simple-react-timepicker'
+				name: '@alim1496/simple-react-timepicker'
 			},
 			{
 				file: packageJson.module,
