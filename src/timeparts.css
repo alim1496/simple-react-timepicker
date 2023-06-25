@@ -1,0 +1,26 @@
+.parts-container {
+	border: 1px solid #2b2929;
+	display: none;
+	transition: display 1s;
+	position: absolute;
+	top: 28px;
+	left: 0;
+	right: 0;
+	height: 30vh;
+	overflow-y: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.parts-container::-webkit-scrollbar {
+	display: none;
+}
+
+.parts-item {
+	padding: 2px 0;
+}
+
+.parts-item:hover {
+	cursor: pointer;
+	background-color: #ebe8e8;
+}
