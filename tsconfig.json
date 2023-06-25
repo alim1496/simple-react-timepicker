@@ -15,12 +15,12 @@
 		"outDir": "dist",
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
-		"rootDir": "src/lib",
+		"rootDir": "src",
 		"declarationMap": true,
 		"lib": ["es2017", "dom"]
 	},
 	"include": [
-		"src/lib"
+		"src"
 	],
 	"exclude": [
 		"node_modules",
