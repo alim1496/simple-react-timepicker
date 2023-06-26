@@ -4,14 +4,15 @@ import InputMask from './InputMask'
 import TimeParts from './TimeParts'
 
 export interface InputProps {
-	time?: Date
+	time?: string
 	showList?: boolean
 	minHour?: number
 	maxHour?: number
+	onChange?: (arg: string) => void
 }
 
 
-const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHour = 23 }) => {
+const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHour = 23, onChange }) => {
 	const [hr, setHr] = useState('')
 	const [mn, setMn] = useState('')
 	const [openList, setOpenList] = useState(false)
@@ -21,10 +22,13 @@ const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHou
 			setHr((new Date().getHours()).toString())
 			setMn((new Date().getMinutes()).toString())
 		} else {
-			setHr((time.getHours()).toString())
-			setMn((time.getMinutes()).toString())
+			setTime(time)
 		}
 	}, [time])
+
+	useEffect(() => {
+		if (onChange) onChange(`${hr}:${mn}`)
+	}, [hr, mn, onChange])
 
 	const setTime = (_time: string) => {
 		const parts = _time.split(':')
