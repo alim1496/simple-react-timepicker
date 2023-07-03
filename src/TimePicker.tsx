@@ -9,10 +9,11 @@ export interface InputProps {
 	minHour?: number
 	maxHour?: number
 	onChange?: (arg: string) => void
+	className?: string
 }
 
 
-const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHour = 23, onChange }) => {
+const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHour = 23, onChange, className }) => {
 	const [hr, setHr] = useState('')
 	const [mn, setMn] = useState('')
 	const [openList, setOpenList] = useState(false)
@@ -38,12 +39,12 @@ const TimePicker: FC<InputProps> = ({ time, showList = true, minHour = 0, maxHou
 	}
 
 	return (
-		<div className="srt-timepicker">
+		<div className={`srt-timepicker ${className}`}>
 			<InputMask min={0 < minHour ? minHour : 0} max={23 > maxHour ? maxHour : 23} value={hr} onChangeCb={(v) => setHr(v)} />
-			<b>:</b>
+			<b className="mb-3">:</b>
 			<InputMask min={0} max={59} value={mn} onChangeCb={(v) => setMn(v)} />
 			{showList && <span className="chevron" onClick={() => setOpenList(!openList)}></span>}
-			<TimeParts open={openList} onItemSelect={setTime} start={minHour} end={maxHour} />
+			{showList && <TimeParts open={openList} onItemSelect={setTime} start={minHour} end={maxHour} />}
 		</div>
 	)
 }

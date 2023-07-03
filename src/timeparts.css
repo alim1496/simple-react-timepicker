@@ -6,7 +6,7 @@
 	top: 28px;
 	left: 0;
 	right: 0;
-	height: 30vh;
+	max-height: 20vh;
 	overflow-y: auto;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
@@ -17,7 +17,8 @@
 }
 
 .parts-item {
-	padding: 2px 0;
+	padding: 2px 18px 2px 0;
+	text-align: center;
 }
 
 .parts-item:hover {

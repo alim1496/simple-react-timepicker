@@ -28,7 +28,7 @@ const TimeParts: FC<TimePartsProps> = ({ open, onItemSelect, start, end }) => {
 
 	return (
 		<div className="parts-container" ref={listRef}>
-			{timeParts && timeParts.map((part, index) => (
+			{timeParts?.map((part, index) => (
 				<div key={index} className="parts-item" onClick={() => onItemSelect(part)}>{part}</div>
 			))}
 		</div>

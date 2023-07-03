@@ -4,8 +4,7 @@ input {
 	color: #242222;
 	appearance: textfield;
 	-moz-appearance: textfield;
-	width: 20px;
-	padding: 4px;
+	width: 1.1em;
 	font-size: 16px;
 }
 
