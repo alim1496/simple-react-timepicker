@@ -40,6 +40,7 @@ export default MyApp
 | `minHour`   | number   | 0                      | The minimum value of hour the user is allowed to input.                                                                        |
 | `maxHour`   | number   | 23                     | The maximum value of hour the user is allowed to input.                                                                        |
 | `onChange`  | function | (time: string) => void | This function helps the user to capture the changed time as `string` in `hh:mm` format.                                        |
+| `className` | string   | ''                     | The name of the class containing customm css rules to be applied.                                                              |
 
 
 ## License
